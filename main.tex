@@ -1,0 +1,93 @@
+\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4j]{bxjsarticle}
+
+\usepackage{bm} % ベクトル
+\usepackage{array} % 数式モードの表
+\usepackage{tabularx} % 表
+\usepackage{graphicx} % 画像の挿入など
+\usepackage{longtable} % 改ページ可能な表
+%\usepackage{mathcomp} % 数式モードのテキストシンボル
+\usepackage{amsmath,amssymb} % 数式
+\usepackage{xcolor} % 色
+\usepackage{tcolorbox} % 色付きの枠
+\usepackage{wrapfig} % 図に対して文書の回り込み
+\usepackage{amsthm} % 定理環境
+%\usepackage{newtxtext,newtxmath} % Times フォント
+\usepackage{mathrsfs} % 花文字
+\usepackage{empheq} % 連立方程式
+\usepackage{framed} % 改ページ可能な表
+\usepackage{tikz} % 図を書く
+\usepackage{braket} % ブラケット記法
+\usepackage{physics} % 数式を簡単に書く
+\usepackage{listings,jvlisting} % ソースコードとか
+\usepackage{comment} % コメント
+\usepackage{bussproofs} % 証明図
+\usepackage{pxrubrica} % ルビ
+\usepackage{ulem} % 取り消し線
+
+\lstset{
+  %	\begin{lstlisting}[caption=hoge,label=fuga]
+  %		ソースコード
+  %	\end{lstlisting}
+  %language = {C++},
+  %backgroundcolor={\color[gray]{.85}},
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\small\ttfamily},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0\zw,
+  xleftmargin=3\zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1\zw,
+  lineskip=-0.5ex
+}
+%\renewcommand{\lstlistingname}{Program}
+
+\newtheoremstyle{mystyle1}% スタイル名
+  {}% 上部スペース
+  {}% 下部スペース
+  {\normalfont}% 本文フォント(\itshape:斜体，\bfseries:太字，\normalfont:普通
+  {}% 1行目のインデント量(\parindent:普通の段落)
+  {\bfseries\sffamily}% 見出しフォント
+  {.}% 見出し後の句読点
+  { }% 見出し後のスペース(\newline:改行)
+  {\thmname{#1}\thmnumber{#2}\thmnote{:\,#3\\}}% 見出しの書式
+\theoremstyle{mystyle1}
+\newtheorem{dfn}{定義}[section]
+\newtheorem{thm}[dfn]{定理}
+\newtheorem{axi}[dfn]{公理}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{prop}[dfn]{命題}
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{ex}[dfn]{例題}
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item\relax
+  {\bfseries % ここを変えた
+  #1\@addpunct{.}}\hspace\labelsep\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+
+\begin{document}
+
+%\title{Test}
+%\author{}
+%\date{\today}
+%\maketitle
+
+hoge
+
+\end{document}

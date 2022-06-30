@@ -1,0 +1,166 @@
+{
+  // Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "template": {
+    "prefix": "\\template",
+    "body": [
+      "\\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4j,titlepage,twocolumn$1]{${2:bxjsarticle}}",
+      "",
+      "\\usepackage{bm} % ベクトル",
+      "\\usepackage{array} % 数式モードの表",
+      "\\usepackage{tabularx} % 表",
+      "\\usepackage{graphicx} % 画像の挿入など",
+      "\\usepackage{longtable} % 改ページ可能な表",
+      "%\\usepackage{mathcomp} % 数式モードのテキストシンボル",
+      "\\usepackage{amsmath,amssymb} % 数式",
+      "\\usepackage{xcolor} % 色",
+      "\\usepackage{tcolorbox} % 色付きの枠",
+      "\\usepackage{wrapfig} % 図に対して文書の回り込み",
+      "\\usepackage{amsthm} % 定理環境",
+      "%\\usepackage{newtxtext,newtxmath} % Times フォント",
+      "\\usepackage{mathrsfs} % 花文字",
+      "\\usepackage{empheq} % 連立方程式",
+      "\\usepackage{framed} % 改ページ可能な表",
+      "\\usepackage{tikz} % 図を書く",
+      "\\usepackage{braket} % ブラケット記法 ",
+      "\\usepackage{physics} % 数式を簡単に書く",
+      "\\usepackage{listings,jvlisting} % ソースコードとか",
+      "\\usepackage{comment} % コメント",
+      "\\usepackage{bussproofs} % 証明図",
+      "\\usepackage{pxrubrica} % ルビ",
+      "\\usepackage{ulem} % 取り消し線",
+      "",
+      "\\lstset{",
+      "\t%\t\\begin{lstlisting}[caption=hoge,label=fuga]",
+      "\t%\t\tソースコード",
+      "\t%\t\\end{lstlisting}",
+      "\t%language = {C++},",
+      "\t%backgroundcolor={\\color[gray]{.85}},",
+      "\tbasicstyle={\\ttfamily},",
+      "\tidentifierstyle={\\small},",
+      "\tcommentstyle={\\small\\ttfamily},",
+      "\tkeywordstyle={\\small\\bfseries},",
+      "\tndkeywordstyle={\\small},",
+      "\tstringstyle={\\small\\ttfamily},",
+      "\tframe={tb},",
+      "\tbreaklines=true,",
+      "\tcolumns=[l]{fullflexible},",
+      "\tnumbers=left,",
+      "\txrightmargin=0\\zw,",
+      "\txleftmargin=3\\zw,",
+      "\tnumberstyle={\\scriptsize},",
+      "\tstepnumber=1,",
+      "\tnumbersep=1\\zw,",
+      "\tlineskip=-0.5ex",
+      "}",
+      "%\\renewcommand{\\lstlistingname}{Program}",
+      "",
+      "\\newtheoremstyle{mystyle1}% スタイル名",
+      "\t{}% 上部スペース",
+      "\t{}% 下部スペース",
+      "\t{\\normalfont}% 本文フォント(\\itshape:斜体，\\bfseries:太字，\\normalfont:普通",
+      "\t{}% 1行目のインデント量(\\parindent:普通の段落)",
+      "\t{\\bfseries\\sffamily}% 見出しフォント",
+      "\t{.}% 見出し後の句読点",
+      "\t{ }% 見出し後のスペース(\\newline:改行)",
+      "\t{\\thmname{#1}\\thmnumber{#2}\\thmnote{:\\,#3\\\\\\\\}}% 見出しの書式",
+      "\\theoremstyle{mystyle1}",
+      "\\newtheorem{dfn}{定義}[section]",
+      "\\newtheorem{thm}[dfn]{定理}",
+      "\\newtheorem{axi}[dfn]{公理}",
+      "\\newtheorem{cor}[dfn]{系}",
+      "\\newtheorem{prop}[dfn]{命題}",
+      "\\newtheorem{lem}[dfn]{補題}",
+      "\\newtheorem{ex}[dfn]{例題}",
+      "",
+      "\\makeatletter",
+      "\\renewenvironment{proof}[1][\\proofname]{\\par",
+      "\t\\pushQED{\\qed}%",
+      "\t\\normalfont \\topsep6\\p@\\@plus6\\p@\\relax",
+      "\t\\trivlist",
+      "\t\\item\\relax",
+      "\t{\\bfseries % ここを変えた",
+      "\t#1\\@addpunct{.}}\\hspace\\labelsep\\ignorespaces",
+      "}{%",
+      "\t\\popQED\\endtrivlist\\@endpefalse",
+      "}",
+      "\\makeatother",
+      "",
+      "${3}",
+      "",
+      "\\begin{document}",
+      "",
+      "\\title{${4}}",
+      "\\author{${5}}",
+      "\\date{${6:\\today}}",
+      "\\maketitle",
+      "",
+      "\t${0}",
+      "",
+      "\\end{document}"
+    ],
+    "description": "template"
+  },
+  "Figure": {
+    "prefix": "figure",
+    "body": [
+      "\\begin{figure}[${1:hbp}]",
+      "\t\\centering",
+      "\t\\includegraphics[${2:width=\\linewidth}]{$3}",
+      "\t\\caption{$4}",
+      "\t\\label{fig:$5}",
+      "\\end{figure}"
+    ],
+    "description": "set figure"
+  },
+  "Table": {
+    "prefix": "table",
+    "body": [
+      "\\begin{table}[${1:hbp}]",
+      "\t\\centering",
+      "\t\\caption{$2}",
+      "\t\\label{tabl:$3}",
+      "\t\\begin{tabular}{$4}\\hline",
+      "\t\t$5",
+      "\t\\end{tabular}",
+      "\\end{table}"
+    ],
+    "description": "set table"
+  },
+  "minted": {
+    "prefix": "minted",
+    "body": [
+      "\\begin{minted}[linenos,breaklines]{${1:C++}}",
+      "\t$0",
+      "\\end{minted}"
+    ],
+    "description": "minted environment"
+  },
+  "New theorem style": {
+    "prefix": "newthmstyle",
+    "body": [
+      "\\newtheoremstyle{${1:stylename}}% スタイル名",
+      "\t{}% 上部スペース",
+      "\t{}% 下部スペース",
+      "\t{\\normalfont}% 本文フォント(\\itshape:斜体，\\bfseries:太字，\\normalfont:普通",
+      "\t{}% 1行目のインデント量(\\parindent:普通の段落)",
+      "\t{\\bfseries\\sffamily}% 見出しフォント",
+      "\t{.}% 見出し後の句読点",
+      "\t{ }% 見出し後のスペース(\\newline:改行)",
+      "\t{\\thmname{#1}\\thmnumber{#2}\\thmnote{:\\,#3\\\\}}% 見出しの書式",
+      "\\theoremstyle{${1:stylename}}"
+    ],
+    "description": "new theorem style"
+  },
+}
