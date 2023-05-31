@@ -1,26 +1,24 @@
 {
-  // 自動保存
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  // end of line
   "files.eol": "\n",
-  // 余計な空白・空行を削除
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  // 最後に空行を追加
   "files.insertFinalNewline": true,
-  // タブのサイズは2
   "editor.tabSize": 2,
-  // 括弧に色を付ける
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "editor.stickyScroll.enabled": true,
   "editor.bracketPairColorization.enabled": true,
-  // ペアの括弧に色付け
   "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.tabs.location": "left",
   "terminal.integrated.shell": "/bin/bash",
 
   // LaTeX Workshop
-  // 使用パッケージのコマンドや環境の補完を有効にする
   "latex-workshop.intellisense.package.enabled": true,
-  // 生成ファイルを削除するときに対象とするファイル
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bbl",
@@ -30,7 +28,7 @@
     "*.lof",
     "*.lot",
     "*.out",
-    // "*.toc", // 目次の生成に必要
+    // "*.toc", // 目次
     "*.acn",
     "*.acr",
     "*.alg",
@@ -44,21 +42,11 @@
     "*.snm",
     "*.nav",
     "*.dvi"
-    //"*.synctex.gz" // synctexに必要
+    //"*.synctex.gz" // synctex
   ],
-  // ビルド時に自動で上記のファイルを削除
   "latex-workshop.latex.autoClean.run": "onBuilt",
-  // 生成ファイルを "out" ディレクトリに吐き出す
-  //"latex-workshop.latex.outDir": "out",
-  // PDFの表示
   "latex-workshop.view.pdf.viewer": "tab",
-  // コンパイル時に PDF をカーソル位置で表示
   "latex-workshop.synctex.afterBuild.enabled": true,
-  "[latex]": {
-    // フォーマッタ
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  // ビルドのレシピ
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -67,7 +55,6 @@
       ]
     }
   ],
-  // ビルドのレシピに使われるパーツ
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -81,12 +68,11 @@
       ]
     }
   ],
-  /*
-  // latexindentはフォーマッタが別にあるので保留
+
   "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
     "-c=%DIR%/",
     "-y=defaultIndent: '%INDENT%'"
-  ],*/
+  ],
 }
