@@ -41,8 +41,8 @@
     "*.fdb_latexmk",
     "*.snm",
     "*.nav",
-    "*.dvi"
-    //"*.synctex.gz" // synctex
+    "*.dvi",
+    // "*.synctex.gz" // synctex
   ],
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.view.pdf.viewer": "tab",
@@ -69,10 +69,10 @@
     }
   ],
 
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.latexindent.args": [
-    "%TMPFILE%",
-    "-c=%DIR%/",
-    "-y=defaultIndent: '%INDENT%'"
-  ],
+  // "latex-workshop.latexindent.path": "latexindent",
+  // "latex-workshop.latexindent.args": [
+  //   "%TMPFILE%",
+  //   "-c=%DIR%/",
+  //   "-y=defaultIndent: '%INDENT%'"
+  // ],
 }
