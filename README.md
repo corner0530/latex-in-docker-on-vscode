@@ -11,11 +11,12 @@ VSCode + Docker で LaTeX 環境を構築する．
 WSL上で構築
 
 - Ubuntu 22.04.2 LTS
-- Docker version 24.0.2, build cb74dfc
-- VSCode 1.78.2
+- Docker version 24.0.7, build afdd53b
+- VSCode 1.84.2
 - VSCode Extensions
-  - Remote - Containers v0.292.0
-  - LaTeX Workshop v9.11.4
+  - Dev Containers v0.321.0
+  - LaTeX Workshop v9.15.0
+  - Docker v1.28.0
 
 ## 使い方
 

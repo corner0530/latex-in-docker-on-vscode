@@ -1,7 +1,12 @@
 {
   "name": "latex-in-docker-on-vscode",
   "dockerFile": "Dockerfile",
-  "extensions": [
-    "james-yu.latex-workshop"
-  ]
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
 }
