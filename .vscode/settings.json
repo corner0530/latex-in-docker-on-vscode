@@ -135,6 +135,8 @@
     // "-r", // 置換
     // "-l", // ローカルファイルを読み込む
   ],
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-fields.sort.enabled": true,
   // その他
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Default Dark+",
