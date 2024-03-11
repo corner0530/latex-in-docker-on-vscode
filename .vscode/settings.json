@@ -1,77 +1,9 @@
 {
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "files.eol": "\n",
-  "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
-  "files.insertFinalNewline": true,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.wordWrap": "on",
-  "editor.stickyScroll.enabled": true,
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.inlineSuggest.enabled": true,
-
-  "editor.minimap.showSlider": "always",
-  "editor.wordSeparators": "~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。　",
-  "editor.unicodeHighlight.allowedCharacters": {
-    "，": true,
-    "．": true
-  },
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-
-  // プロファイルの設定
-  "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.tabs.location": "left",
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "bash",
-      "overrideName": true,
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh"
-    },
-    "fish": {
-      "path": "fish"
-    },
-    "tmux": {
-      "path": "tmux"
-      //"icon": "terminal-tmux"
-    },
-    "pwsh": {
-      "path": "pwsh"
-      //"icon": "terminal-powershell"
-    }
-  },
-  "terminal.integrated.profiles.windows": {
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "overrideName": true,
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    }
-  },
-  // LaTeX Workshop
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
@@ -95,7 +27,10 @@
     // "*.log",
     "*.fdb_latexmk",
     "*.snm",
+    "*.synctex(busy)",
+    "*.synctex.gz(busy)",
     "*.nav",
+    "*.vrb",
     "*.dvi",
     // "*.synctex.gz" // synctex
   ],
@@ -119,6 +54,7 @@
         "-lualatex",
         "-shell-escape", // minted使用時に必要
         "-outdir=%OUTDIR%",
+        // "-pdfdvi",
         "%DOC%"
       ]
     }
@@ -137,10 +73,4 @@
   ],
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.bibtex-fields.sort.enabled": true,
-  // その他
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "vscode-icons",
-  "security.workspace.trust.untrustedFiles": "open",
-  "wordcounter.include_eol_chars": false,
 }
