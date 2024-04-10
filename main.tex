@@ -49,16 +49,7 @@
 }
 %\renewcommand{\lstlistingname}{Program}
 
-\newtheoremstyle{mystyle1}% スタイル名
-  {}% 上部スペース
-  {}% 下部スペース
-  {\normalfont}% 本文フォント(\itshape:斜体，\bfseries:太字，\normalfont:普通
-  {}% 1行目のインデント量(\parindent:普通の段落)
-  {\bfseries\sffamily}% 見出しフォント
-  {.}% 見出し後の句読点
-  { }% 見出し後のスペース(\newline:改行)
-  {\thmname{#1}\thmnumber{#2}\thmnote{:\,#3\\}}% 見出しの書式
-\theoremstyle{mystyle1}
+\theoremstyle{definition}
 \newtheorem{dfn}{定義}[section]
 \newtheorem{thm}[dfn]{定理}
 \newtheorem{axi}[dfn]{公理}
@@ -66,19 +57,16 @@
 \newtheorem{prop}[dfn]{命題}
 \newtheorem{lem}[dfn]{補題}
 \newtheorem{ex}[dfn]{例題}
+\newtheorem{rem}[dfn]{注}
 
-\makeatletter
-\renewenvironment{proof}[1][\proofname]{\par
-  \pushQED{\qed}%
-  \normalfont \topsep6\p@\@plus6\p@\relax
-  \trivlist
-  \item\relax
-  {\bfseries % ここを変えた
-  #1\@addpunct{.}}\hspace\labelsep\ignorespaces
-}{%
-  \popQED\endtrivlist\@endpefalse
-}
-\makeatother
+\newtheorem*{dfn*}{定義}
+\newtheorem*{thm*}{定理}
+\newtheorem*{axi*}{公理}
+\newtheorem*{cor*}{系}
+\newtheorem*{prop*}{命題}
+\newtheorem*{lem*}{補題}
+\newtheorem*{ex*}{例題}
+\newtheorem*{rem*}{注}
 
 
 \begin{document}

@@ -6,18 +6,6 @@ VSCode + Docker で LaTeX 環境を構築する．
 - LaTeX ソースのビルドツール : Latexmk
 - VSCode の拡張機能 "Dev Containers" を利用し，Docker コンテナ内でファイルの編集を行う．
 
-## 環境
-
-WSL上で構築
-
-- Ubuntu 22.04.2 LTS
-- Docker version 24.0.7, build afdd53b
-- VSCode 1.84.2
-- VSCode Extensions
-  - Dev Containers v0.321.0
-  - LaTeX Workshop v9.15.0
-  - Docker v1.28.0
-
 ## 使い方
 
 0. Docker，Docker Compose，VSCode，VSCode 拡張の "Dev Containers" をインストール
