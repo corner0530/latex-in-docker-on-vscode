@@ -1,15 +1,19 @@
 {
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
+  "[latex][bibtex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
   "latex-workshop.bibtex-fields.sort.enabled": true,
   "latex-workshop.bibtex-format.align-equal.enabled": true,
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.bibtex-format.trailingComma": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onSucceeded",
   "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
@@ -40,9 +44,6 @@
     "*.dvi",
     // "*.synctex.gz" // synctex
   ],
-  "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.synctex.afterBuild.enabled": true,
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -56,25 +57,19 @@
       "name": "latexmk",
       "command": "latexmk",
       "args": [
-        "-silent",
         "-lualatex",
-        "-shell-escape", // minted使用時に必要
         "-outdir=%OUTDIR%",
-        // "-pdfdvi",
         "%DOC%"
       ]
     }
   ],
-  "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  // latexindent
   "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
-    "-c=%DIR%/"
-    // "-g=%DOCFILE%-indent.log", // 出力するログファイル名
-    // "-r", // 置換
-    // "-l", // ローカルファイルを読み込む
+    "-c=%DIR%/",
+    "-g=%DOCFILE%-indent.log", // 出力するログファイル名
+    "-l", // ローカルのYAMLファイルを読み込む
   ],
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
 }

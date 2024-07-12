@@ -13,5 +13,5 @@ RUN tlmgr install \
   physics \
   bussproofs \
   latexindent
-RUN cpanm YAML::Tiny
-RUN cpanm File::HomeDir
+RUN cpanm YAML::Tiny \
+  && cpanm File::HomeDir

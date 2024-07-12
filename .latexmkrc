@@ -1,11 +1,11 @@
 # LaTeX
-$latex = 'uplatex -synctex=1 -halt-on-error -file-line-error %O %S';
+$latex = 'uplatex -synctex=1 -halt-on-error -file-line-error -silent %O %S';
 
 # PdfLaTeX
 $pdflatex = 'pdflatex -synctex=1 %O %S';
 
 # LuaLaTeX
-$lualatex = 'lualatex -synctex=1 -halt-on-error -file-line-error %O %S';
+$lualatex = 'lualatex -synctex=1 -halt-on-error -file-line-error -silent %O %S';
 
 # BibTeX
 $bibtex = 'upbibtex %O %S';
@@ -19,19 +19,3 @@ $dvipdf = 'dvipdfmx %O -o %D %S';
 $pdf_mode = 3;
 
 $max_repeat = 5;
-
-# preview
-$pvc_view_file_via_temporary = 0;
-if ($^O eq 'linux') {
-    $dvi_previewer = "xdg-open %S";
-    $pdf_previewer = "xdg-open %S";
-} elsif ($^O eq 'darwin') {
-    $dvi_previewer = "open %S";
-    $pdf_previewer = "open %S";
-} else {
-    $dvi_previewer = "start %S";
-    $pdf_previewer = "start %S";
-}
-
-# clean up
-$clean_full_ext = "%R.synctex.gz"
