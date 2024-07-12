@@ -4,6 +4,10 @@
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "latex-workshop.bibtex-format.align-equal.enabled": true,
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-format.trailingComma": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.clean.method": "glob",
@@ -73,6 +77,4 @@
     // "-r", // 置換
     // "-l", // ローカルファイルを読み込む
   ],
-  "latex-workshop.bibtex-format.sort.enabled": true,
-  "latex-workshop.bibtex-fields.sort.enabled": true,
 }
