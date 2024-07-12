@@ -5,6 +5,8 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.clean.method": "glob",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bak*",
