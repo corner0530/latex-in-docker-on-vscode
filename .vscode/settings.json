@@ -11,6 +11,7 @@
   "latex-workshop.bibtex-format.align-equal.enabled": true,
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.bibtex-format.trailingComma": true,
+  "latex-workshop.formatting.latex": "latexindent",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.autoClean.run": "onSucceeded",
@@ -63,8 +64,8 @@
       ]
     }
   ],
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.latexindent.args": [
+  "latex-workshop.formatting.latexindent.path": "latexindent",
+  "latex-workshop.formatting.latexindent.args": [
     "%TMPFILE%",
     "-c=%DIR%/",
     "-g=%DOCFILE%-indent.log", // 出力するログファイル名
