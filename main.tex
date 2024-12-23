@@ -1,28 +1,20 @@
-\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4j]{bxjsarticle}
+\documentclass[autodetect-engine,dvi=dvipdfmx,ja=standard,a4j]{bxjsarticle}
 
-\usepackage{bm} % ベクトル
-\usepackage{array} % 数式モードの表
-\usepackage{tabularx} % 表
-\usepackage{graphicx} % 画像の挿入など
-\usepackage{longtable} % 改ページ可能な表
-%\usepackage{mathcomp} % 数式モードのテキストシンボル
 \usepackage{amsmath,amssymb} % 数式
-\usepackage{xcolor} % 色
-\usepackage{tcolorbox} % 色付きの枠
-\usepackage{wrapfig} % 図に対して文書の回り込み
 \usepackage{amsthm} % 定理環境
-%\usepackage{newtxtext,newtxmath} % Times フォント
-\usepackage{mathrsfs} % 花文字
+\usepackage{array} % 数式モードの表
+\usepackage{bm} % ベクトル
 \usepackage{empheq} % 連立方程式
-\usepackage{framed} % 改ページ可能な表
-\usepackage{tikz} % 図を書く
-\usepackage{braket} % ブラケット記法
-\usepackage{physics} % 数式を簡単に書く
+\usepackage{graphicx} % 画像の挿入など
 \usepackage{listings,jvlisting} % ソースコードとか
-\usepackage{comment} % コメント
-\usepackage{bussproofs} % 証明図
-\usepackage{pxrubrica} % ルビ
-\usepackage{ulem} % 取り消し線
+\usepackage{physics} % 数式を簡単に書く
+\usepackage{tikz} % 図を書く
+\usepackage{xcolor} % 色
+% \usepackage{framed} % 改ページ可能な表
+% \usepackage{mathcomp} % 数式モードのテキストシンボル
+% \usepackage{mathrsfs} % 花文字
+% \usepackage{newtxtext,newtxmath} % Times フォント
+% \usepackage{tcolorbox} % 色付きの枠
 
 \lstset{
   %	\begin{lstlisting}[caption=hoge,label=fuga]
@@ -49,25 +41,25 @@
 }
 %\renewcommand{\lstlistingname}{Program}
 
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{cor*}{Corollary}
+
 \theoremstyle{definition}
-\newtheorem{dfn}{定義}[section]
-\newtheorem{thm}[dfn]{定理}
-\newtheorem{axi}[dfn]{公理}
-\newtheorem{cor}[dfn]{系}
-\newtheorem{prop}[dfn]{命題}
-\newtheorem{lem}[dfn]{補題}
-\newtheorem{ex}[dfn]{例題}
-\newtheorem{rem}[dfn]{注}
+\newtheorem{ass}[thm]{Assumption}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem*{ass*}{Assumption}
+\newtheorem*{dfn*}{Definition}
 
-\newtheorem*{dfn*}{定義}
-\newtheorem*{thm*}{定理}
-\newtheorem*{axi*}{公理}
-\newtheorem*{cor*}{系}
-\newtheorem*{prop*}{命題}
-\newtheorem*{lem*}{補題}
-\newtheorem*{ex*}{例題}
-\newtheorem*{rem*}{注}
-
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem*{rem*}{Remark}
 
 \begin{document}
 
